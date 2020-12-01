@@ -1,0 +1,22 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label>grid coordination</label>
+    <input name="x" ngModel required placeholder="X">
+    <input name="y" ngModel required placeholder="Y">
+    <label >aspirateur coordination</label>
+    <input name="x_0" ngModel required placeholder="X_0">
+    <input name="y_0" ngModel required placeholder="Y_0">
+    <input name="dir" ngModel required placeholder="Direction">
+    <label >path</label>
+    <input name="path" ngModel required placeholder="Path">
+    <button class="submit">Submit</button>
+</form>
+
+<div *ngIf="submeted" class="center">
+  <button (click)="onStart()" class="start">Start</button>
+  <div style="display: block; text-align: center;">({{x_0}},{{y_0}},{{direction}})</div>
+  <div *ngFor="let raw of grid" style="display: block; text-align: center;">
+    <div *ngFor="let square of raw"  style="display: inline;">
+      <img src="{{square.src}}" [ngStyle]="square.style" alt="">
+    </div>
+  </div>
+</div>
