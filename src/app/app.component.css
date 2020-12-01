@@ -6,7 +6,6 @@ img{
 form{
     margin: auto;
     width: 60%;
-    border: 3px solid rgb(9, 87, 231);
     padding: 2px;
     display: grid;
     margin-top: 10px;
@@ -47,4 +46,9 @@ input{
     background-color: blueviolet;
     border-radius: 50px;
     margin-bottom: 10px;
+}
+
+.line{
+    margin-bottom: 10px;
+    background-color: blueviolet;
 }

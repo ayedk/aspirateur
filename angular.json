@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "aspirateur"
+  "defaultProject": "aspirateur",
+  "cli": {
+    "analytics": "fbfee527-af4c-4858-a30b-bf3219a5f94e"
+  }
 }

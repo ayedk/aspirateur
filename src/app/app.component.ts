@@ -12,12 +12,9 @@ export class AppComponent {
   path;
   abs; 
   ord;
-  squareimage='https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/500px-Square_-_black_simple.svg.png';
+  squareimage='../assets/img/square.png';
   aspimage='';
   submeted=false;
-  aspi_style={};
-  style={};
-  appState;
   x_0: any;
   y_0: any;
   end;
@@ -29,7 +26,6 @@ export class AppComponent {
     this.direction = f.value.dir;
     this.grid = [];
     this.path =f.value.path;
-    
     this.submeted=true;
   }
   
@@ -40,9 +36,9 @@ export class AppComponent {
         this.grid[i] = [];
         for(let j=0;j<this.ord;j++){
           if(i==this.x_0 && j==this.y_0){
-            this.grid[i][j] = new Square(i,j,this.aspi_style,this.aspimage)
+            this.grid[i][j] = new Square(i,j,this.aspimage)
           }else{
-            this.grid[i][j] = new Square(i,j,this.style,this.squareimage);
+            this.grid[i][j] = new Square(i,j,this.squareimage);
           }
         }
       }
